@@ -26,13 +26,12 @@ public class Room implements IRoom{
     private List<Row> rows;
 
 
-    private void generateMatrix(){
+    private void generateMatrix() {
         rows = new ArrayList<>(length);
-        for (Row r : rows) {
-            r = new Row(width);
-        }
-    }
+        for (int i = 0; i <length; i++)
+            rows.add(new Row(width));
 
+    }
 
     @Override
     public void setLength(int l) {
